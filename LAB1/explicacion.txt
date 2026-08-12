@@ -1,0 +1,26 @@
+Explicación de los resultados 
+
+Se uso un conjunto de datos que relaciona las horas de estudio de una estudiante con la calificación que obtiene. La idea principal fue encontrar una fórmula que permita estimar una calificación a partir de la cantidad de horas de la estudiante que estudia.
+
+El programa encontró los valores de b y w, que forman la ecuación de la línea recta: y = b + wx
+
+Donde b representa la calificación aproximada cuando las horas de estudio, mientras que w indica cuánto aumenta la calificación por cada hora adicional de estudio.
+
+Los resultados muestran que existe una relación positiva entre las horas de estudio y las calificaciones
+Después de encontrar los mejores valores de b y w, se realizaron predicciones para 10 nuevos valores de horas de estudio. El programa calculó una calificación estimada para cada cantidad de horas.
+
+La gráfica permite observar visualmente los datos reales y la línea calculada por el programa. Si los puntos se encuentran cerca de la línea, significa que la fórmula representa de manera razonable la relación entre las horas de estudio y las calificaciones.
+
+Para el algoritmo encontrar los valores de b y w se utilizó un método llamado descenso por gradiente, implementado  en Python.
+
+Primero el programa comienza colocando los valores de b y w en cero. Despues, usa  los datos del conjunto para calcular una primera predicción de las calificaciones, luego se compara cada calificación calculada con la calificación real.
+
+El programa calcula el error de todos los estudiantes y utiliza esta información para modificar poco a poco los valores de b y w. Este proceso se repite muchas veces. En cada repetición, el programa intenta reducir un poco mas el error y conseguir una línea que se ajuste  a los datos.
+
+Para controlar cuanto cambian los valores en cada paso se utiliza alpha = 0.01. Este valor hace que los cambios sean pequeños y progresivos.
+
+El proceso continua hasta que el error practicamente deja de cambiar. En ese momento se considera que el algoritmo ha encontrado valores adecuados para b y w, es decir, que  llego a una solución estable.
+
+Finalmente, utilizando esos valores encontrados,  aplica la fórmula para realizar las predicciones de los 10 nuevos valores de horas de estudio.
+
+En conclusion, el algoritmo funciona de una manera sencilla empieza con valores iniciales, calcula el error, corrige los valores de b y w, repite este proceso varias veces y finalmente utiliza los valores encontrados para realizar nuevas predicciones.
